@@ -1,0 +1,38 @@
+type Versicherung {
+    name: String
+    versicherungsnummer: String
+}
+
+type Kontakt {
+    id: String
+    rolle: String
+    vorname: String
+    nachname: String
+    geschlecht: String
+    religion: String
+    telefonnummer: String
+}
+
+type Notfall {
+    blutgruppe: String
+    allergien: String
+    hausarzt: Kontakt
+    notfallkontakt: Kontakt
+}
+
+type Bewohner {
+    id: String
+    rolle: String
+    vorname: String
+    nachname: String
+    geschlecht: String
+    religion: String
+    telefonnummer: String
+    AGBsUnterschrieben: Boolean
+    versicherung: Versicherung
+    notfall: Notfall
+}
+
+type Query {
+    bewohner: [Bewohner]
+}

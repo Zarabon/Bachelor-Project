@@ -1,0 +1,24 @@
+{
+  "name": "Altenheim Graphql API",
+  "api_id": "nursing-home-api",
+  "org_id": "default",
+  "definition": {
+    "location": "header",
+    "key": "version"
+  },
+  "use_keyless": true,
+  "version_data": {
+    "not_versioned": true,
+    "versions": {
+      "Default": {
+        "name": "Default"
+      }
+    }
+  },
+  "driver": "otto",
+  "proxy": {
+    "listen_path": "/nursing-home-api/",
+    "target_url": "http://nursing-home-api-service:4000",
+    "strip_listen_path": true
+  }
+}
